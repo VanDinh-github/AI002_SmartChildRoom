@@ -20,7 +20,7 @@ Hệ thống không chỉ phát hiện vật thể (như dao, kéo) mà còn ph�
 Dưới đây là hình ảnh thực tế hệ thống hoạt động với giao diện Streamlit:
 
 ![Demo Preview](asset/demo1.PNG)
-*(Thay thế hình ảnh này bằng ảnh chụp màn hình thực tế của dự án)*
+
 
 ## ✨ Tính năng chính (Key Features)
 
