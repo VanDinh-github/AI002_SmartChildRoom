@@ -1,0 +1,95 @@
+levels:
+  3:
+    name: "High Risk"
+    description: "This level indicates a high risk situation that requires immediate attention and action."
+    color: "red"
+  2:
+    name: "Medium Risk"
+    description: "This level indicates a moderate risk situation that should be monitored and addressed in a timely manner."
+    color: "orange"
+  1:
+    name: "Low Risk"
+    description: "This level indicates a low risk situation that should be monitored but does not require immediate action."
+    color: "yellow"
+
+zones:
+
+  GLOBAL:
+    zone_id: 0
+    forbidden_objects:
+      
+      Knife: 3
+      Kitchen knife: 3
+      
+      Dagger: 3
+      Sword: 3
+      Axe: 3
+      Chisel: 3
+      Paper cutter: 3
+      Pizza cutter: 3
+      Syringe: 3
+      Nail (Construction): 3
+      Handgun: 3
+      Rifle: 3
+      Shotgun: 3
+      Bomb: 3
+      Missile: 3
+      Cannon: 3
+      Rocket: 3
+      Weapon: 3
+      Heater: 3
+      Torch: 3
+      Candle: 3
+      Gas stove: 3
+      Fireplace: 3
+ 
+    name: "Global Zone"
+    description: "Vùng toàn cục áp dụng cho tất cả các khu vực khác."
+  
+  FLOOR:
+    zone_id: 1
+    forbidden_objects:
+      Soap dispenser: 2
+      Scissors: 3
+      Hair spray: 2
+      Cooking spray: 2
+      Detergent: 2
+      Power plugs and sockets: 2  
+      Hammer: 2
+      Screwdriver: 2
+      Drill: 2
+      Wrench: 2
+    name: "Floor Zone"
+    description: "Khu vực sàn nhà nơi có thể có các vật dụng sắc nhọn."
+    polygon:
+      - [3.9444444444443434, 760.0]
+      - [455.05555555555543, 742.2222222222222]
+      - [574.9536687631025, 1919.0]
+      - [6.166666666666515, 1908.888888888889]
+        
+
+  SHELF:
+    zone_id: 2
+    forbidden_objects:
+      Perfume: 2
+      Medical equipment: 2
+      Personal care: 2
+      Microwave oven: 2
+      Washing machine: 2
+      Blender: 2
+      Wine glass: 1
+      Vase: 1
+      Plate: 1
+      Mug: 1
+      Coffee cup: 1
+      Mirror: 1
+      Picture frame: 1
+    name: "Shelf Zone"
+    description: "Khu vực kệ nơi có thể có các vật dụng dễ vỡ hoặc có giá trị cao."
+    polygon:
+      - [457.2777777777776,542.2222222222222]   
+      - [617.2777777777776,1784.4444444444446]
+      - [1077.2777777777776,1713.3333333333335]
+      - [1072.8333333333333,460.0]
+      - [761.722222222222,511.1111111111111]
+

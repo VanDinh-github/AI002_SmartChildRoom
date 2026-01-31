@@ -1,0 +1,9 @@
+
+ultralytics>=8.0.0
+opencv-python           # OpenCV: Đọc/Xử lý video và vẽ Bounding Box
+numpy                   # Xử lý ma trận ảnh
+streamlit               # Tạo giao diện Web Dashboard
+pandas                  # Xử lý bảng biểu cho Log cảnh báo
+
+
+      
