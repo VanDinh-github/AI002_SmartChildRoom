@@ -43,7 +43,7 @@ class ObjectDetector:
         frame_w = data_packet["metadata"]["frame_width"]
 
         # 1. Chạy Inference (Dự đoán)
-        results = self.model.predict(source=img, conf=self.conf_threshold, verbose=False, device=0)
+        results = self.model.predict(source=img, conf=self.conf_threshold, verbose=False, device='cpu')
         
         detections = []
         

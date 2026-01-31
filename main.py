@@ -127,11 +127,12 @@ def main():
                 for zone_name, p in polygon.items():
                     pts = np.array(p, np.int32)
                     pts = pts.reshape((-1, 1, 2))
-                    cv2.polylines(overlay, [pts], isClosed=True, color=(255, 0, 0), thickness=2)
-                    cv2.putText(overlay, zone_name, tuple(pts[0][0]), 
-                                cv2.FONT_HERSHEY_SIMPLEX, 0.7, ( 255,0, 0), 2)
+                    cv2.polylines(overlay, [pts], isClosed=True, color=(0,0,255), thickness=2)
+                    cv2.putText(raw_frame, zone_name, tuple(pts[0][0]), 
+                                cv2.FONT_HERSHEY_SIMPLEX, 1.5   , ( 51,255,255), 2)
                     cv2.fillPoly(overlay, [pts], (0, 255, 0))
                 cv2.addWeighted(overlay, 0.3, raw_frame, 0.7, 0, raw_frame)
+                
                 # P4: Action Triggering (Chỉ xử lý khi có vi phạm)
                 if is_violation:
                     triggered = st.session_state.alert_manager.trigger(det, (is_violation, v_type, severity, msg))
@@ -153,11 +154,11 @@ def main():
             prev_time = curr_time
             # Vẽ FPS lên khung hình, hiển thị chữ to hơn
             cv2.putText(raw_frame, f"FPS: {int(fps_display)}", (20, 40), 
-                        cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
+                        cv2.FONT_HERSHEY_SIMPLEX, 1, (0,0, 255), 2)
             # --- CẬP NHẬT GIAO DIỆN ---
             # Chuyển BGR -> RGB
             frame_rgb = cv2.cvtColor(raw_frame, cv2.COLOR_BGR2RGB)
-            video_placeholder.image(frame_rgb, channels="RGB", use_container_width=True)
+            video_placeholder.image(frame_rgb, channels="RGB", width=500)
             
             # Cập nhật bảng Log
             if st.session_state.alert_logs:
