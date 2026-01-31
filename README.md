@@ -29,13 +29,13 @@ Dưới đây là hình ảnh thực tế hệ thống hoạt động với giao
 * **🚨 Contextual Alerts:** Hệ thống quy tắc (Rule Engine) thông minh:
     * **High Risk:** Vật sắc nhọn (dao, kéo, khoan) nằm trên sàn nhà.
     * **Medium Risk:** Đồ dễ vỡ (cốc, bình hoa) ở mép bàn/kệ thấp.
+    * **Low Risk:** Đồ có nguy cơ gây nguy hiểm
 * **🖥️ Dashboard trực quan:** Giao diện web Streamlit hiển thị video stream, vẽ vùng cảnh báo và nhật ký vi phạm (Log).
-* **☁️ GPU Acceleration:** Tối ưu hóa để chạy trên Google Colab/Kaggle với GPU (Tesla T4/P100).
-
+* **☁️ GPU Acceleration:** Tối ưu hóa để chạy trên CPU/GPU
 ## 🛠️ Cài đặt (Installation)
 
 ### Yêu cầu tiên quyết
-* Python 3.8+
+* Python 3.10+
 * GPU (Khuyên dùng để đạt FPS tốt nhất)
 
 ### Các bước cài đặt
@@ -46,14 +46,10 @@ Dưới đây là hình ảnh thực tế hệ thống hoạt động với giao
     cd AI002_SmartChildRoom
     ```
 
-2.  **Cài đặt thư viện:**
-    ```bash
-    pip install -r requirements.txt
-    ```
-    *(Nếu chưa có file requirements.txt, cài thủ công: `pip install streamlit ultralytics opencv-python-headless numpy`)*
-
 ## 🚀 Hướng dẫn sử dụng (Usage)
 
-### 1. Chạy trên máy cục bộ (Localhost)
+### 1. Chạy DOCKER trên máy cục bộ (Localhost)
 ```bash
-streamlit run main.py
+docker build -t smartchildroom .
+docker run -it --rm -p 8501:8501 smartchildroom
+
