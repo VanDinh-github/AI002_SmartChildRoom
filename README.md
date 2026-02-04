@@ -21,6 +21,7 @@ Dưới đây là hình ảnh thực tế hệ thống hoạt động với giao
 
 ![Demo Preview](asset/demo1.PNG)
 
+Link video demo cho code có thể tham khảm tại [đây](https://drive.google.com/file/d/1mQg7dq1Px8_0c73Csia1sSrOLobfy7AL/view?usp=sharing)
 
 ## ✨ Tính năng chính (Key Features)
 
